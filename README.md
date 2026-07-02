@@ -1,2 +1,2 @@
 # potential-doodle
-test repo
+test repo **
