@@ -1,13 +1,12 @@
 name: Vale
-on: [pull_request]
+on: [pull_request]  # yamllint disable-line rule:truthy
 
 jobs:
   vale:
     name: Run vale on the book
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-#      - uses: errata-ai/vale-action@2.1.1
-      - uses: vale-cli/vale-action@v2.1.2
+      - uses: actions/checkout@v5
+      - uses: vale-cli/vale-action@latest
         with:
           version: 3.15.1
