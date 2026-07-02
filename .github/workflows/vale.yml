@@ -1,12 +1,10 @@
-name: Vale
-on: [pull_request]  # yamllint disable-line rule:truthy
+name: reviewdog vale
+on: [pull_request]
 
 jobs:
   vale:
-    name: Run vale on the book
+    name: runner / vale
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: vale-cli/vale-action@latest
-        with:
-          version: 3.15.1
+      - uses: actions/checkout@v4
+      - uses: vale-cli/vale-action@v2.1.1
